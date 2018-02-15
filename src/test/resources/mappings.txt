@@ -1,0 +1,4 @@
+test {
+    TITLE@PERSON copy() $.name.title@get-student-by-id
+    TITLE@PERSON2 copy() $.name.title@get-student-by-id
+}

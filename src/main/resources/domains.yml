@@ -1,0 +1,30 @@
+- name: person
+  attributes:
+    - TITLE
+    - GIVEN_NAMES
+    - SURNAME
+    - PERSON_ID
+    - SEX
+    - EMAIL_ADDR
+    - DECEASED_IND
+    - BIRTH_DT
+    - STAFF_MEMBER_IND
+    - ARCHIVE_EXCLUSION_IND
+    - PURGE_EXCLUSION_IND
+    - UPDATE_WHO
+    - UPDATE_ON
+    - AUTO_ENABLE_IND
+    - OVRD_ACCEPT_WS_EU_IND
+    - OVRD_WS_EU_IDENTIFIER
+    - OVRD_WS_EU_API_ID_TYPE
+
+- name: /v2/students/{studentId}
+  attributes:
+    - $.name.title
+    - $.name.givenNames
+    - $.name.familyName
+    - $.id
+    - $.gender
+    - $.emailAddress
+    - $.deceased
+    - $.dateOfBirth

@@ -1,0 +1,33 @@
+- sources:
+  - domain: person
+    field: TITLE
+  targetAttr:
+    domain: /v2/students/{studentId}
+    field: $.name.title
+  rule: copy
+- sources:
+  - domain: person
+    field: PERSON_ID
+  targetAttr:
+    domain: /v2/students/{studentId}
+    field: $.id
+  rule: copy
+- sources:
+  - domain: /v2/students/{studentId}
+    field: $.id
+  targetAttr:
+    domain: person
+    field: PERSON_ID
+  rule: copy
+- sources:
+  - domain: /v2/students/{studentId}
+    field: $.id
+  targetAttr:
+    domain: person
+    field: PERSON_ID3
+  rule: copy
+
+# [TITLE@person] -copy()- [$.name.title@/v2/students/{studentId}]
+
+
+
